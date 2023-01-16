@@ -1,0 +1,27 @@
+@mixin adaptiveFont($maxSize, $minSize, $maxContainer) {
+    $addSize: $maxSize - $minSize;
+    $addMobsize: $addSize + $addSize * 0.7;
+    @media (max-width: 1210px) {
+        font-size: calc(#{$minSize + px} + #{$addMobsize} * ((100vw - 320px) / #{$maxContainer}));
+    }
+    @media (min-width: 1210px) {
+        font-size: calc(#{$minSize + px} + #{$addSize} * (100vw / #{$maxContainer}));
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////
+
+//Адаптив, начинающийся с определенной ширины (с ширины ограничивающего контейнера, как правило)
+@mixin adaptiveAllCont($adaptProperty, $maxSize, $minSize, $maxContainer, $minMob) {
+    @media (max-width: #{$maxContainer + px}) {
+        #{$adaptProperty}: calc(#{$minSize + px} + (#{$maxSize - $minSize}) * ((100vw - #{$minMob + px}) / (#{$maxContainer - $minMob})))
+    }
+}
+//padding-top: calc(20px + (100 - 20) * ((100vw - 320px) / (800 - 320)));
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+//Адаптив без ограничивающего контейнера. То же самое, что adaptiveAllCont, только без медиа-запроса
+@mixin adaptiveAll($adaptProperty, $maxSize, $minSize, $maxContainer, $minMob) {
+    #{$adaptProperty}: calc(#{$minSize + px} + (#{$maxSize - $minSize}) * ((100vw - #{$minMob + px}) / (#{$maxContainer - $minMob})))
+}
