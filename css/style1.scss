@@ -445,8 +445,8 @@ body {
             width: 480px;
             height: 2px;
             background-color: #C9A23C;
-            @media (max-width: 485px) {
-                width: 100%;
+            @media (max-width: 650px) {
+                display: none;
             }
         }
     }
@@ -463,7 +463,6 @@ body {
             @media (max-width: 935px) {
                 margin-bottom: 20px;
                 max-width: 415px;
-                margin: 0 auto;
             }
 
             @media (max-width: 445px) {
@@ -502,8 +501,8 @@ body {
             width: 480px;
             height: 2px;
             background-color: #C9A23C;
-            @media (max-width: 485px) {
-                width: 100%;
+            @media (max-width: 650px) {
+                display: none;
             }
         }
     }

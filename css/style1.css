@@ -615,9 +615,9 @@ body.active {
   background-color: #C9A23C;
 }
 
-@media (max-width: 485px) {
+@media (max-width: 650px) {
   .about__title-wrp span {
-    width: 100%;
+    display: none;
   }
 }
 
@@ -647,7 +647,6 @@ body.active {
   .about__cont-wrp img {
     margin-bottom: 20px;
     max-width: 415px;
-    margin: 0 auto;
   }
 }
 
@@ -702,9 +701,9 @@ body.active {
   background-color: #C9A23C;
 }
 
-@media (max-width: 485px) {
+@media (max-width: 650px) {
   .whywe__title-wrp span {
-    width: 100%;
+    display: none;
   }
 }
 

@@ -11,7 +11,10 @@
     font-weight: 500;
     color: #333333;
     margin-bottom: 30px;
-    @include adaptiveAllCont('font-size', 40, 20, 1230, 320)
+    @include adaptiveAllCont('font-size', 40, 20, 1230, 320);
+    @media (max-width: 650px) {
+        margin-bottom: 20px;
+    }
 }
 
 
@@ -29,8 +32,8 @@
         height: 2px;
         background-color: #C9A23C;
         margin-top: 10px;
-        @media (max-width: 485px) {
-            width: 100%;
+        @media (max-width: 650px) {
+            display: none;
         }
     }
     &__text {
@@ -220,8 +223,8 @@
     background-color: #FFD25A;
     margin-top: 10px;
 
-    @media (max-width: 485px) {
-        width: 100%;
+    @media (max-width: 650px) {
+        display: none;
     }
     }
 }
@@ -261,7 +264,7 @@
             color: #fff;
             display: block;
             &:not(:last-child) {
-                margin-bottom: 6px;
+                margin-bottom: 10px;
             }
             @media (max-width: 400px) {
                 font-size: 16px;
