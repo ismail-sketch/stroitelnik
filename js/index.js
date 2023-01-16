@@ -57,7 +57,7 @@ const headerContacts =  document.querySelector('.header__contacts');
 const menuList2 = document.querySelector('.menu__list');
 
 function telMove() {
-	if(window.innerWidth < 445) {
+	if(window.innerWidth < 470) {
 		menuList2.insertAdjacentElement('beforeend', headerContacts);
 	} else {
 		headerContainer.insertAdjacentElement('beforeend', headerContacts);
