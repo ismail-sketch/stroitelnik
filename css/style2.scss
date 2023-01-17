@@ -107,6 +107,7 @@
     }
     &__text-right {
         padding: 20px 20px 20px 30px;
+        flex: 1 1 auto;
         border-radius: 10px;
         height: max-content;
         -webkit-box-shadow: -1px 2px 8px 0px rgba(34, 60, 80, 0.2);
